@@ -7,7 +7,7 @@ package com.gameprojects.arkhamhorrorrm;
 /*
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Данный клас хранит данные о персонаже игрока (характеристики, показатели 
-здоровья и рассудка, верний и нижний пределы показателей и характеристик)
+здоровья и рассудка, верхний и нижний пределы показателей и характеристик)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++S
 */
 
@@ -23,6 +23,14 @@ public class GameCharacter {
     @Setter
     @Getter
     private String name;
+
+    @Getter
+    @Setter
+    private String startLocation;
+
+    @Getter
+    @Setter
+    private String actualLocation;
 
     @Getter
     @Setter
@@ -120,11 +128,15 @@ public class GameCharacter {
     @Setter
     private int actualComposure;
 
-    public void charCreate(String name, int health, int mind, int speed, int secrecy,
+    public void charCreate(String name, String startLocation, String actualLocation, int health, int mind, int speed, int secrecy,
             int strong, int will, int knowledge, int luck, int composure, int lowSpeed,
                            int lowSecrecy, int lowStrong, int lowWill, int lowKnowledge,
                            int lowLuck){
         this.name = name;
+
+        this.startLocation = startLocation;
+
+        this.actualLocation = actualLocation;
 
         this.health = health;
         this.mind = mind;

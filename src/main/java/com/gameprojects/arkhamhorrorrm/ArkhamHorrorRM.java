@@ -8,6 +8,7 @@ package com.gameprojects.arkhamhorrorrm;
  *
  * @author vlad__236
  */
+
 public class ArkhamHorrorRM {
 
     public static void main(String[] args) {
