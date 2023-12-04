@@ -6,9 +6,10 @@ package com.gameprojects.arkhamhorrorrm;
 
 /*
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Данный клас хранит данные о персонаже игрока (характеристики, показатели 
-здоровья и рассудка, верхний и нижний пределы показателей и характеристик)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++S
+Данный класс хранит данные о персонаже игрока (характеристики, деньги,
+показатели здоровья и рассудка, верхний и нижний пределы показателей и
+характеристик)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 
 import lombok.Getter;
@@ -19,6 +20,10 @@ import lombok.Setter;
  * @author vlad__236
  */
 public class GameCharacter {
+
+    @Setter
+    @Getter
+    private int money;
 
     @Setter
     @Getter
@@ -55,6 +60,10 @@ public class GameCharacter {
     @Getter
     @Setter
     private int actualSpeed;
+
+    @Getter
+    @Setter
+    private int movementPoints;
 
     @Getter
     @Setter
@@ -128,10 +137,12 @@ public class GameCharacter {
     @Setter
     private int actualComposure;
 
-    public void charCreate(String name, String startLocation, String actualLocation, int health, int mind, int speed, int secrecy,
+    public void charCreate(int money, String name, String startLocation, String actualLocation, int health, int mind, int speed, int secrecy,
             int strong, int will, int knowledge, int luck, int composure, int lowSpeed,
                            int lowSecrecy, int lowStrong, int lowWill, int lowKnowledge,
                            int lowLuck){
+        this.money = money;
+
         this.name = name;
 
         this.startLocation = startLocation;
@@ -160,5 +171,7 @@ public class GameCharacter {
         this.lowLuck = lowLuck;
 
         this.composure = composure;
+
+        movementPoints = actualSpeed;
     }
 }
