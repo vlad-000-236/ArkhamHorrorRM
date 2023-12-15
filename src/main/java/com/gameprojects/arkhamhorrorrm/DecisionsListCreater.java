@@ -49,4 +49,8 @@ public class DecisionsListCreater {
             }
         }
     }
+
+    public void characterChoiseDecision(){
+
+    }
 }

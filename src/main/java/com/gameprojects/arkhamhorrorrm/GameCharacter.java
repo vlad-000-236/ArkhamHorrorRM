@@ -137,6 +137,10 @@ public class GameCharacter {
     @Setter
     private int actualComposure;
 
+    @Getter
+    @Setter
+    private int actualDamage;
+
     public void charCreate(int money, String name, String startLocation, String actualLocation, int health, int mind, int speed, int secrecy,
             int strong, int will, int knowledge, int luck, int composure, int lowSpeed,
                            int lowSecrecy, int lowStrong, int lowWill, int lowKnowledge,
