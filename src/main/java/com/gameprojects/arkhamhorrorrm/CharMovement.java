@@ -19,7 +19,7 @@ public class CharMovement {     //Не закончил
     @Getter
     private String [] posibleMovment;
 
-    public String [] posibleMovement(String actualLocation){
+    public String [] possibleMovement(String actualLocation){
         switch(actualLocation){
 
             case "Вокзал":
@@ -249,7 +249,6 @@ public class CharMovement {     //Не закончил
         else{
             setNewLocation(newLocation);
         }
-
         return getNewLocation();
     }
 }
