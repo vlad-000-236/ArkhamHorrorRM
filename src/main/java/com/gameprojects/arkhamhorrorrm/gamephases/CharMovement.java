@@ -1,4 +1,4 @@
-package com.gameprojects.arkhamhorrorrm;
+package com.gameprojects.arkhamhorrorrm.gamephases;
 
 /*
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
